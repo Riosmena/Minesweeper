@@ -8,7 +8,7 @@ Exercises
 """
 
 from random import randrange, seed
-from turtle import *
+import turtle as t
 
 from freegames import floor, square
 
@@ -43,8 +43,8 @@ def initialize():
 def stamp(x, y, text):
     """Display `text` at coordinates `x` and `y`."""
     square(x, y, 50, 'white')
-    color('black')
-    write(text, font=('Arial', 50, 'normal'))
+    t.color('black')
+    t.write(text, font=('Arial', 50, 'normal'))
 
 
 def draw():
@@ -86,10 +86,10 @@ def tap(x, y):
                         pairs.append(pair)
 
 
-setup(420, 420, 370, 0)
-hideturtle()
-tracer(False)
+t.setup(420, 420, 370, 0)
+t.hideturtle()
+t.tracer(False)
 initialize()
 draw()
-onscreenclick(tap)
-done()
+t.onscreenclick(tap)
+t.done()
